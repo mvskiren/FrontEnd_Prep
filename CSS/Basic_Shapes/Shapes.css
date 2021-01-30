@@ -1,0 +1,66 @@
+/*
+  Basic idea is block level square comes with 45 degrees edges and 
+  setting width and height to 0 will form 4 triangles 
+*/
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+:root {
+  margin: 0;
+  height: 100vh;
+}
+div {
+  margin: 20px;
+}
+.container {
+  margin-top: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square {
+  width: 130px;
+  height: 130px;
+  background-color: #555;
+}
+.circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: red;
+}
+.rectangle {
+  width: 150px;
+  height: 75px;
+  background-color: purple;
+}
+.triangle-up {
+  width: 0px;
+  height: 0px;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 60px solid green;
+}
+.triangle-right {
+  width: 0px;
+  height: 0px;
+  border-left: 60px solid black;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+}
+.triangle-left {
+  width: 0px;
+  height: 0px;
+  border-right: 60px solid blue;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+}
+.parallelogram {
+  width: 100px;
+  height: 50px;
+  transform: skew(20deg);
+  background: #555;
+}
