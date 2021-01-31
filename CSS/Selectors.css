@@ -1,0 +1,153 @@
+/* Descedant Selectors : */
+/*---------------------------------------------------------------------------*/
+/* All p tags inside the header element */
+/* use element followed by space */
+
+header p {
+  font-size: 50px;
+}
+
+/* Attribute Selectors*/
+/*---------------------------------------------------------------------------*/
+/* (Mostly used for input elements to target) */
+/* Drawback is its quite uneasy for browser to parse*/
+
+div[id="hello"] {
+  color: white;
+}
+
+input[type="text"] {
+  color: gray;
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  color: yellow;
+}
+input[target="_blank"] {
+  color: orange;
+}
+/*Combinators [> + ~ *] */
+/*---------------------------------------------------------------------------*/
+/* These gives flexibility to target the elements */
+/* Child Combinator > Targeting Immediate Direct Children */
+form > a {
+  font-size: 0.7em;
+}
+/* Ajacent Sibiling Combinator > Targeting Immediate Direct Children */
+/* Former Element + Target Element {} Its targets the from second elements ....*/
+.btn + .btn {
+  color: red;
+}
+/*---------------------------------------------------------------------------*/
+/* Attribute Selectors and Pseudo-Classes */
+/* Learn how to select elements without having to write extra classes or IDs in the markup. Target elements based on specific pieces of HTML attributes, user interaction states, or their position on the page.*/
+
+li:empty {
+  color: red;
+}
+
+li:first-child {
+  color: green;
+}
+li:last-child {
+  color: yellow;
+}
+/*---------------------------------------------------------------------------*/
+/* Substring matching attribute Selectors */
+
+/* Begins with */
+
+a[href^='https://'] {
+  color: red;
+}
+
+/* Ends with */
+
+a[href$=".jpg"] {
+  color: white;
+}
+/* Contains with */
+a[src*="downloads"] {
+  color: firebrick;
+}
+/*---------------------------------------------------------------------------*/
+/* pseudo classes */
+/* Its a special classes add to the selector element that provides dynamic behaivour*/
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  color: red;
+}
+a:focus {
+  color: yellow;
+}
+ol li:first-child {
+  color: black;
+}
+/*---------------------------------------------------------------------------*/
+/* User Action UI action state pseudo elements */
+input:focus,
+textarea:focus {
+  border-bottom: chartreuse;
+}
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+input:disabled {
+  color: gray;
+}
+/*---------------------------------------------------------------------------*/
+/* Pseudo elements :: */
+
+.intro::first-letter {
+  float: left;
+  font-size: 80px;
+  padding: 10px 10px 0 0;
+  margin: 10px;
+  background: black;
+}
+
+/* Before and After virtual elements and not visible in source code and only in css */
+/* We will get two extra layers before and after the elements */
+/* Inserts Generated content from css */
+
+.jpeg::before {
+  content: url("image.jpeg");
+  margin-right: 10px;
+}
+h1::before,
+h1::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+/* pseudo classes */
+/*---------------------------------------------------------------------------*/
+/* Advance selector */
+
+li:nth-child(even) {
+}
+li:nth-child(odd) {
+}
+li:nth-child(2n + 3) {
+  /*starting form 3rd element select every 2 element in cycle */
+}
+li:nth-child(-n + 3) {
+  /* select 3rd combination element and select all previous items as well */
+}
+div:nth-of-type(4) {
+  /* target only 4 th Specific div inside the parent */
+}
+:root {
+  /*same as html element but this has specificity with xml and other as well */
+}
+
+:target {
+  /* target id as href */
+}
+/*---------------------------------------------------------------------------*/
