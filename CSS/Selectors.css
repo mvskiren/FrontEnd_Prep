@@ -1,6 +1,6 @@
 /* Descedant Selectors : */
 /*---------------------------------------------------------------------------*/
-/* All p tags inside the header element */
+/* All p tags inside the header element including grand childs as well */
 /* use element followed by space */
 
 header p {

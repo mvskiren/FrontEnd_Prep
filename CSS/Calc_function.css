@@ -1,0 +1,32 @@
+/* learn how to use calc() to display full-width elements when placed inside padded containers. */
+/* Normally when you apply padding to a container,
+the padding creates white space around its content,
+It pushes content like images, paragraphs, and headings inwards,
+Sometimes you don't want padding to effect all the elements in a container. */
+/* BASE STYLES */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font: 1em/1.5 sans-serif;
+  background: #edeff0;
+}
+.card {
+  width: 50%;
+  margin: 1em auto;
+  background: white;
+  padding: 0 1.5em 1em;
+  overflow: auto;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+/* CALC STYLES */
+
+img {
+  max-width: calc(
+    100%+3em
+  ); /*Adding 3em to total width adding 1.5em to card contianer*/
+  margin-left: -1.5em;
+}
