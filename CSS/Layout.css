@@ -1,0 +1,41 @@
+/* CSS Box Sizing */
+
+/* The CSS box-sizing property allows us to include the padding and border in an element's total width and height. */
+* {
+  box-sizing: border-box;
+}
+/* Max-width, Max-height,min-width */
+/* When developers are more concerend about changing the width according to viewport */
+/* We told the browser to make this section 100% of the height of the screen. */
+
+header {
+  width: 25vh;
+}
+section {
+  min-height: 100vh; /* if it has some content that more than 100vh then it can freely expand using min-height*/
+}
+
+/* Display : none, inline,inline-block */
+/* Note all anchors takes bydefuat has inline and css can;t overide the width */
+a {
+  display: inline;
+}
+
+/* Positioning */
+/* Absolute removes the element from normal document flow  */
+/* allows you to positon element on edges based on view port  */
+
+.container {
+  position: relative;
+}
+.element {
+  position: absolute;
+  top: 10;
+  left: 10px;
+}
+.img {
+  float: left; /* float along with text */
+  clear: both; /* useful if we dont want the paragraph and image apperars clipped */
+}
+/* fixed is always position to its viewport */
+/* Note when removes element from the noraml document flow its stacks upon another element and onorder to specify the stack order use Z-index by default all elements has 0 has its defautl values*/
