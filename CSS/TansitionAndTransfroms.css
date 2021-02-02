@@ -1,0 +1,76 @@
+/* Only ANimatable properties are transitioned in CSS */
+/* -------------------------------------------------------------------------------- */
+button {
+  color: #fff;
+  background-color: red;
+  transition-duration: 3s; /*this duration will apply to the all the properties to the class */
+}
+button:hover {
+  background: green;
+}
+/*Suppose you want to apply only for the specific property */
+.button {
+  color: #fff;
+  background-color: red;
+  transition-property: background; /*this duration will apply to the all the properties to the class */
+}
+button:hover {
+  background: green;
+}
+/* --------------------------------------------------------------------------------
+Not Every propery will be transitioned , only if it has mid half way point like bgcolor,width,opacity */
+photo-overlay {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0.2s;
+}
+photo-overlay:hover {
+  opacity: 1;
+}
+photo-overlay:hover .button {
+  opacity: 1;
+}
+transtition-timming-function: ease-in, ease-out, linear, ease by default;
+
+/* ShortHand Property */
+photo-overlay {
+  transition: opacity 0.3s ease-in 0.2s, background 0.2s ease-out 0.1s; /* propery-naem duration timming delay*/
+}
+
+/* ------------------------------------------------------------------------------- */
+/*     Image Transforms &tansitions       */
+/* - anticlock wise  + clockwise */
+/* Default transform orgin is center */
+
+img {
+  transition: transfrom 0.3s;
+}
+
+img:hover {
+  transform: rotate(-180deg);
+}
+
+img:hover {
+  transform: skewX(10deg); /* Parllelogram */
+}
+img:hover {
+  transform: scale(1.5); /* Parllelogram */
+}
+
+/* ------------------------------------------------------------------------------- */
+/* Transform + Transition of classes Image slider in component */
+
+.slide .photo-overlay {
+  transform: translateX(-100);
+}
+.slide:hover .photo-overlay {
+  transform: translateX(0);
+}
+/* tranform : rotate () translatex() scaleX() ; */
+/* ------------------------------------------------------------------------------- */
+/* Cubic bezier - used as transition-timming -fucntion */
+.phot {
+  transition: opacity 0.2 cubic-bezier(0, 0.9, 0, 2) 0.8;
+}
+/* ------------------------------------------------------------------------------- */
