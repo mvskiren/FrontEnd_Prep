@@ -18,7 +18,7 @@
   margin-right: auto;
 }
 .item-2 {
-  align-self: flex-end;
+  align-self: flex-end; /* Strech is the default value */
 }
 
 /* Orders: Orders properties are useful for reordering the content columns on the mobile and desktop screens :
@@ -32,3 +32,12 @@ Suppose on mobile screens you can place a featured content column above all the 
 .item-1 {
   order: -2;
 }
+
+
+.sample {
+  flex: flex-grow flex-shrink flex-basis ; /* basis is replace for normal width of a element */
+  flex: 1 1 auto;
+  flex 1 1 25%;  
+}
+
+
