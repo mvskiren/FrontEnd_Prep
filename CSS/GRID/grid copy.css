@@ -1,0 +1,154 @@
+/* ===================================== 
+   Grid Layout
+======================================== */
+
+.grid {
+  display: grid;
+  width: 800px;
+  grid-template-columns: 200px 200px 200px;
+  /* grid-template-columns: 1fr 1fr 1fr;  Fraction unit sames as flex 1 */
+  grid-template-columns: 200px auto 200px;
+  grid-gap: 10px 20px; /*gutter row and column */
+}
+/* anomyous grid item  */
+
+/* repeat function */
+.grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 2fr repeat(3, 1fr); /* first column maintian 2fr and remaining 3  to 1fr);*/
+  grid-template-columns: 2fr repeat(3, minmax(200px, 1fr));
+  grid-template-columns: 2fr repeat(autofit, minmax(200px, 1fr)); /* No need of media-query*/
+}
+
+/* ===================================== 
+   Scrimba rid Layout
+======================================== */
+
+.container {
+  display: grid;
+  grid-template: repeat(2, 50px) / repeat(3, 1fr);
+  grid-gap: 3px;
+}
+.container {
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px 200px 40px;
+}
+
+.header {
+  grid-column: 1 / -1;
+}
+
+.menu {
+}
+
+.content {
+  grid-column: 2 / -1;
+}
+
+.footer {
+  grid-column: 1 / -1;
+}
+
+/* ===================================== 
+   New way of postioning the items, using template areas
+======================================== */
+.container {
+  height: 100%;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px auto 40px;
+  grid-template-areas:
+    ". h h h h h h h h h h ."
+    "m c c c c c c c c c c c"
+    ". f f f f f f f f f f .";
+}
+
+.header {
+  grid-area: h;
+}
+
+.menu {
+  grid-area: m;
+}
+
+.content {
+  grid-area: c;
+}
+
+.footer {
+  grid-area: f;
+}
+
+/* ===================================== 
+   postioning using Auto-fit
+======================================== */
+
+.container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px);
+}
+/* ===================================== 
+   Implicit rows positoning using auto-rows
+======================================== */
+
+.container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+}
+
+/* A key thing in Grid is that the order of items in the source does not matter, as long as they are children of the element that has been declared as a grid */
+
+/* ===================================== 
+   Responive image grid view -important
+======================================== */
+.container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 75px;
+  grid-auto-flow: dense;
+}
+
+.horizontal {
+  grid-column: span 2;
+}
+
+.vertical {
+  grid-row: span 2;
+}
+
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Named lines  */
+.container {
+  height: 100%;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+  grid-template-rows: [main-start] 40px [content-start] auto [content-end] 40px [main-end];
+}
+
+.header {
+  grid-column: main;
+}
+
+.menu {
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-column: main;
+}

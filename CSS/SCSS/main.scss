@@ -1,0 +1,105 @@
+//Partials Import
+@import "partials/variables", "paratials/mixins";
+
+/* ===================================== 
+   SASS(indented code) VS SCSS(sassy css)
+======================================== */
+
+$color-primary: #278da4;
+$font-stack-primary: "Raleway", sans-serif;
+$white: white;
+body {
+  background-color: $color-primary;
+  font-family: $font-stack-primary;
+}
+
+/* ===================================== 
+   Nested Selectors
+   Note: Don't nest more than two level as a good practice
+======================================== */
+
+.main-nav {
+  color: red;
+  li {
+    color: blue; // Descendant class selector
+  }
+  a {
+    color: $white;
+    &:hover {
+      /* & parent selector */
+      color: $color-primary;
+    }
+  }
+  > h1 {
+    font-size: 20px; //child selector
+  }
+}
+
+p {
+  margin-bottom: 12.5em;
+  .intro & p {
+    font-family: $white; // reverse nesting
+  }
+}
+
+/* ========================================
+                  Mixins
+    Step: Create a mixin with @mixin directive
+    Include a mixin inside other rules , using @include
+    @mixins rules need to appear above the rules including them
+======================================== */
+
+@mixin skewed {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  transform: skewY(-2deg);
+  background-color: #fff;
+  bottom: -25px;
+}
+
+header {
+  @include skewed;
+}
+
+@mixin container($w) {
+  width: $width;
+}
+
+/* ========================================
+                @extend .btn 
+                placeholder selectors - %btn - never appear on output
+======================================== */
+
+/* Partials */
+
+/* =====================================
+            Color functions 
+            lighten() ,darken(),visual contrast- complement()
+            
+            don't to mention rgba value explicity 
+
+======================================== */
+$base: #3acec2;
+$base-dark: darken($base, 25%);
+$base-light: lighten($base, 25%);
+
+/* =====================================
+            Custom functions ()
+
+======================================== */
+@function px-to-pc($target, $context) {
+  @return ($target / $context) * 100%;
+}
+
+/* =====================================
+            Loops 
+
+======================================== */
+@for $i from 10 through 20 {
+  .box-#{$i} {
+    background-color: adjust-hue(tomato, $i * 20);
+  }
+}
