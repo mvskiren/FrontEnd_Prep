@@ -1,0 +1,35 @@
+/* ===================================== 
+   Percentages and max-min width
+======================================== */
+.container {
+  width: 90%; /* relative to the parent container ; */
+  max-width: 690px;
+}
+/* ===================================== 
+   Relative Units always relative to font-size and viewports
+   em & rems - ems are having cascading effects 
+======================================== */
+
+body {
+  font-size: 10px;
+}
+ul {
+  font-size: 2em;
+}
+li {
+  font-size: 1.5em; /*total 30px here through cascading effect */
+}
+/* Rems are always relative to the root html element */
+/* ===================================== 
+   em- padding and margin,width and percentages
+   rem-font-sizes
+======================================== */
+
+/********* ===================================== 
+  Responisve padding & margins for paragraph and headings
+======================================== ******/
+h1 {
+  font-size: 16px;
+  margin-bottom: 2em;
+  padding: 1em 0; /* relative to font-size of parent element */
+}
