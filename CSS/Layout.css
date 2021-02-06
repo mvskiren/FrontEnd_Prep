@@ -16,7 +16,7 @@ section {
 }
 
 /* Display : none, inline,inline-block */
-/* Note all anchors takes bydefuat has inline and css can;t overide the width */
+/* Note all anchors takes bydefuat has inline and css can;t overide the width and height unlike inline-block */
 a {
   display: inline;
 }
