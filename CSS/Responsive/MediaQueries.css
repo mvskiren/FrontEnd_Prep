@@ -1,0 +1,24 @@
+/* ===================================== 
+   Media Queries
+======================================== */
+
+
+
+Basic Syntax - @media media-type and (media-features) 
+
+@media screen {...}
+@media print  {...}
+@media speech  {...}
+
+
+*Widths
+*Oreitentation
+*Specific Features;
+
+
+@media (min-width: 600px) {...}
+@media (Oreitentation: landscape) {..}
+
+
+
+
