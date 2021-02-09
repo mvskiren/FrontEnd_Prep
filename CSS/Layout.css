@@ -39,3 +39,8 @@ a {
 }
 /* fixed is always position to its viewport */
 /* Note when removes element from the noraml document flow its stacks upon another element and onorder to specify the stack order use Z-index by default all elements has 0 has its defautl values*/
+
+/* Useful for Images */
+div > img {
+  object-fit: fill, cover, contain, scale-down;
+}

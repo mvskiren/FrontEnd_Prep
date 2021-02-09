@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
+  <head>
+    <style>
 body {
-    height: 100%;
-    width: 100%;
 
-    
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 .parent {
   width: 400px;
@@ -35,18 +41,19 @@ body {
  
   50%  {
     transform: translateX(100%) translateY(100%);
-  }
+  } 
   100% {
     transform: translateX(100%);
       background-color: green;}
 }
 </style>
-    </head>
-    <body>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="parent">
+        <div class="child"></div>
+      </div>
+    </div>
 
-        <div class="parent">
-            <div class="child"></div>
-        </div>
-
-    </body>
+  </body>
 </html>
