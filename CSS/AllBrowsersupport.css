@@ -1,0 +1,15 @@
+/* Automatically vendor prefix your rules
+Some nonstandard or experimental features are prefixed in CSS. Different browsers use different prefixes for them, such as: */
+
+ -webkit-   /* used for WebKit based browsers such as Chrome, Safari, or newer versions of Opera. */
+-o-
+-moz-
+-ms-
+
+body {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;  
+  -ms-flex-align: center;  
+}

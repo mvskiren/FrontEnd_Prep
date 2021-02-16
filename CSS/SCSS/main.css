@@ -1,0 +1,128 @@
+/* ===================================== 
+   SASS(indented code) VS SCSS(sassy css)
+======================================== */
+body {
+  background-color: #278da4;
+  font-family: "Raleway", sans-serif;
+}
+
+/* ===================================== 
+   Nested Selectors
+   Note: Don't nest more than two level as a good practice
+======================================== */
+.main-nav {
+  color: red;
+}
+
+.main-nav li {
+  color: blue;
+}
+
+.main-nav a {
+  color: white;
+}
+
+.main-nav a:hover {
+  /* & parent selector */
+  color: #278da4;
+}
+
+.main-nav > h1 {
+  font-size: 20px;
+}
+
+p {
+  margin-bottom: 12.5em;
+}
+
+.intro p p {
+  font-family: white;
+}
+
+/* ========================================
+                  Mixins
+    Step: Create a mixin with @mixin directive
+    Include a mixin inside other rules , using @include
+    @mixins rules need to appear above the rules including them
+======================================== */
+header {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: skewY(-2deg);
+          transform: skewY(-2deg);
+  background-color: #fff;
+  bottom: -25px;
+}
+
+/* ========================================
+                @extend .btn 
+                placeholder selectors - %btn - never appear on output
+======================================== */
+/* Partials */
+/* =====================================
+            Color functions 
+            lighten() ,darken(),visual contrast- complement()
+            
+            don't to mention rgba value explicity 
+
+======================================== */
+/* =====================================
+            Custom functions ()
+
+======================================== */
+/* =====================================
+            Loops 
+
+======================================== */
+.box-10 {
+  background-color: #47a6ff;
+}
+
+.box-11 {
+  background-color: #4768ff;
+}
+
+.box-12 {
+  background-color: #6347ff;
+}
+
+.box-13 {
+  background-color: #a047ff;
+}
+
+.box-14 {
+  background-color: #de47ff;
+}
+
+.box-15 {
+  background-color: #ff47e3;
+}
+
+.box-16 {
+  background-color: #ff47a6;
+}
+
+.box-17 {
+  background-color: #ff4768;
+}
+
+.box-18 {
+  background-color: tomato;
+}
+
+.box-19 {
+  background-color: #ffa047;
+}
+
+.box-20 {
+  background-color: #ffde47;
+}
+
+/* =====================================
+            Errors and Warns
+
+======================================== */
+/*# sourceMappingURL=main.css.map */

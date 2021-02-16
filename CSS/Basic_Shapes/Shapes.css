@@ -1,11 +1,19 @@
-/*
+/* 
   Basic idea is block level square comes with 45 degrees edges and 
   setting width and height to 0 will form 4 triangles 
 */
 
-* {
+/* * {
   box-sizing: border-box;
   text-align: center;
+} */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 :root {
@@ -20,6 +28,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .square {
   width: 130px;
@@ -63,4 +72,63 @@ div {
   height: 50px;
   transform: skew(20deg);
   background: #555;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  background-color: #000;
+}
+
+#google {
+  font-size: 50px;
+  width: 3em;
+  height: 3em;
+  position: relative;
+  border-radius: 50%;
+  background: ##000;
+  border-top: 1em solid #ea4335;
+  border-right: 1em solid #4285f4;
+  border-bottom: 1em solid #34a853;
+  border-left: 1em solid #fbbc05;
+  animation: animate-font 5s ease-in-out;
+}
+#google::before {
+  content: "";
+  width: 2.45em;
+  height: 1em;
+  position: absolute;
+  z-index: 100;
+  background-color: #4285f4;
+  transform: translateY(-50%);
+  top: 50%;
+  right: -0.95em;
+}
+#google::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  z-index: 0;
+  border-top: 2em solid transparent;
+  border-right: 2em solid #000;
+}
+
+@keyframes animate-font {
+  0% {
+    opacity: 0.2;
+    transform: rotate(360deg) scale(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotate(180deg) scale(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(100%);
+  }
 }
