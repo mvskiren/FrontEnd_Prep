@@ -79,7 +79,7 @@ body {
   align-items: center;
   margin: 0;
   height: 100vh;
-  background-color: #000;
+  /* background-color: #000; */
 }
 
 #google {
@@ -131,4 +131,27 @@ body {
     opacity: 1;
     transform: rotate(0deg) scale(100%);
   }
+}
+
+.block1 {
+  width: 150px;
+  height: 40px;
+  background: blue;
+  float: left;
+  opacity: 0.8;
+  border-radius: 48px;
+  border-bottom-left-radius: 5px;
+  transform: rotate(-90deg);
+}
+
+.block2 {
+  width: 150px;
+  height: 40px;
+  background: blue;
+  float: left;
+  opacity: 0.8;
+  border-radius: 48px;
+  border-bottom-left-radius: 5px;
+  transform: rotateY(-360deg);
+  
 }

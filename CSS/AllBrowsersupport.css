@@ -5,7 +5,7 @@ Some nonstandard or experimental features are prefixed in CSS. Different browser
 -o-
 -moz-
 -ms-
-
+/* Example */
 body {
   display: flex;
   display: -webkit-flex;
