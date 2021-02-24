@@ -12,4 +12,5 @@ body {
   align-items: center;
   -webkit-align-items: center;  
   -ms-flex-align: center;  
+  tex-indent: 1em; /*instead of padding-left*/
 }
