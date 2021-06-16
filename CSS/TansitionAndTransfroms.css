@@ -74,3 +74,14 @@ img:hover {
   transition: opacity 0.2 cubic-bezier(0, 0.9, 0, 2) 0.8;
 }
 /* ------------------------------------------------------------------------------- */
+
+transform(-100%) moves from its postion  and + overflow:hidden makes it beauty and magic
+
+/* Enabling 3d transforms in css
+Add it to the top level parent  */
+.content {
+  persepctive : 700px; // the more the less z-depth 
+}
+
+/* back flipping effect in css */
+https://teamtreehouse.com/library/create-a-flipping-animation-with-3d-transform-properties
