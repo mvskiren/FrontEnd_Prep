@@ -3,7 +3,7 @@
 
 /******************************************************************************************/
 // 1.  PolyFill for forEach()
-
+alert("hi");
 if (true || !Array.prototype.forEach) {
   Array.prototype.myForEach = function(callback) {
     if (this == null) {
@@ -58,7 +58,7 @@ if (true || !Array.prototype.every) {
     }
     var count = 0;
     for (var index = 0; index < this.length; index++) {
-      if (callback(this[index], index, this)) {
+      if (callback(this[index])) {
         ++count;
       }
     }
@@ -193,7 +193,7 @@ if (true || !Array.prototype.flat) {
 }
 /*****************************************************************************************/
 //Copied
-export default function flat() {
+function flat() {
   var depth = isNaN(arguments[0]) ? 1 : Number(arguments[0]);
 
   return depth
@@ -215,3 +215,13 @@ export default function flat() {
 /*****************************************************************************************/
 alert("Hello");
 const arr = [2, 4, 2, -1, 2, 17, -109];
+
+Array.prototype.myEven = function() {
+  var output = [];
+  for (var index = 0; index < this.length; index++) {
+    if (this[index] % 2 === 0) {
+      output.push(this[index]);
+    }
+  }
+  return output;
+};
