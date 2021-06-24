@@ -28,3 +28,9 @@ const multiplyCheck = doArthimeticOperation([1, 2, 3, 4, 5], multiply);
 const additionCheck = doArthimeticOperation([1, 2, 3, 4, 5], addition);
 const substractionCheck = doArthimeticOperation([1, 2, 3, 4, 5], substraction);
 console.log(multiplyCheck, additionCheck, substractionCheck);
+
+// Arrow function shortcut calling
+const multiplyCheck = doArthimeticOperation(
+  [1, 2, 3, 4, 5],
+  input => input * 2
+);
