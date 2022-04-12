@@ -13,6 +13,14 @@ p
   
 }
 
+.home h1, .home btn, .home div {
+  color: red;
+}
+or 
+.home :is(h1,btn,div) {
+  color: red;
+}
+
 /********Aspect-ratio **********/
 
 .box{
