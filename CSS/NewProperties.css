@@ -13,3 +13,10 @@ p
   
 }
 
+/********Aspect-ratio **********/
+
+.box{
+  width:50rem;
+  aspect-ratio: 1 / 1; (perfect square)
+}
+
