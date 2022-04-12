@@ -1,1 +1,15 @@
 padding-block: min(10vh,10rem); // only top and bottom padding 
+
+/******** min ***********/
+width: 70%;
+max-width: 500px;
+or
+width: min(500px,70%) ; matches short one 
+
+/*******Responsive font size without media query ***************/
+p
+{
+  font-size: clamp(1rem, 1.25vw, 1.25rem); min ,stable(ideal), max
+  
+}
+
